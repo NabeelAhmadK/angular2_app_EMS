@@ -1,0 +1,44 @@
+<app-app-header></app-app-header>
+<div class="container">
+         
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Job Position</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Action</th>
+        
+      </tr>
+    </thead>
+    <tbody >
+      <tr  *ngFor="let employee of employees; let i = index;">
+        <td><span *ngIf="editedIndex !== i">{{employee.r_id}}</span>
+                    <input type="text" class="form-control" [(ngModel)]="employee.r_id" value={{employee.r_id}} *ngIf="editedIndex === i"></td>
+        <td><span *ngIf="editedIndex !== i">{{employee.r_first_name}}</span>
+                    <input type="text" class="form-control" [(ngModel)]="employee.r_first_name" value={{employee.r_first_name}} *ngIf="editedIndex === i"></td>
+        <td><span *ngIf="editedIndex !== i">{{employee.r_last_name}}</span>
+                    <input type="text" class="form-control" [(ngModel)]="employee.r_last_name" value={{employee.r_last_name}} *ngIf="editedIndex === i"></td>
+        <td><span *ngIf="editedIndex !== i">{{employee.r_email}}</span>
+                    <input type="text" class="form-control" [(ngModel)]="employee.r_email" value={{employee.r_email}} *ngIf="editedIndex === i"></td>
+        <td><span *ngIf="editedIndex !== i">{{employee.r_job_pos}}</span>
+                    <input type="text" class="form-control" [(ngModel)]="employee.r_job_pos" value={{employee.r_job_pos}} *ngIf="editedIndex === i"></td>
+        <td>{{employee.r_department}}</td>
+        <td><span *ngIf="editedIndex !== i">{{employee.r_salary}}</span>
+                    <input type="text" class="form-control" value={{employee.r_salary}} *ngIf="editedIndex === i"></td>
+        <td><button class="btn btn-info" (click) = "Edit(i, employee.r_id)" *ngIf="editedIndex !== i"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+        <td><button class="btn btn-info" (click) = "Save(i, employee.r_id)" *ngIf="editedIndex === i"><i class="fa fa-floppy-o" aria-hidden="true"></i>
+</button></td>
+       
+
+      </tr>
+    
+    </tbody>
+  </table>
+   <app-paging (pageEvent) = "onPageChangeEvent($event)"></app-paging>
+</div>
+<app-app-footer></app-app-footer>

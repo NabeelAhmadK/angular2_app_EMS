@@ -1,0 +1,15 @@
+[
+
+  {
+
+    "ID": "1",
+    "FirstName": "Nabeel",
+    "LastName" : "Ahmad",
+    "Email": "nabeel@gmail.com",
+    "JobPosition": "Developer",
+    "Department": "App Development",
+    "Salary": "45000",
+    "ProfilePic":""
+  }  
+  
+]

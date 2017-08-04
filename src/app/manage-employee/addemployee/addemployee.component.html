@@ -1,0 +1,105 @@
+<app-app-header></app-app-header>
+<div class="container">
+
+  <form class="form-horizontal" [formGroup]="employeeForm" (ngSubmit)="Submit()" >
+        
+    <div class="row">
+      <div class="col-md-1 col-xs-2"></div>
+      <div class="well well-sm col-xs-8 col-md-10" style="text-align: center;">Employee Entry Form</div>
+      <div class="col-md-1 col-xs-2"></div>
+    </div>
+    <div class="row">
+      <div class = "col-md-10">
+      <div class="form-group">
+        <label class="control-label col-sm-2 col-md-2"   >ID :</label>
+        <div class="col-sm-8 col-md-8">
+          <input type="text" class="form-control" formControlName = "ID" placeholder="ID" >   
+          <app-validation [control] = "employeeForm.controls.ID"></app-validation>     
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+    
+      <div class="form-group">
+        <label class="control-label col-sm-2">First Name:</label>
+        <div class="col-sm-8">
+          <input type="text" class="form-control"  placeholder="First Name" formControlName = "FirstName"> 
+          <app-validation [control] = "employeeForm.controls.FirstName"></app-validation> 
+        </div> 
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2 col-md-2"  >Last Name :</label>
+        <div class="col-sm-8 col-md-8">
+          <input type="text" class="form-control" placeholder="Last Name" formControlName = "LastName">  
+          <app-validation [control] = "employeeForm.controls.LastName"></app-validation>      
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      
+      
+      
+
+      <div class="form-group">
+        <label class="control-label col-sm-2 col-md-2" >Email :</label>
+        <div class="col-sm-8 col-md-8">
+          <input type="email"  class="form-control" placeholder="Enter Email" formControlName = "Email">
+          <app-validation [control] = "employeeForm.controls.Email"></app-validation> 
+          <!-- <div *ngIf="employeeForm.controls['Email'].hasError('required')" >
+              Please Enter Email
+          </div>      -->
+        </div>      
+        <div class="col-md-2"></div>
+        
+        
+      </div>
+    
+
+      <div class="form-group">
+        <label class="control-label col-sm-2 col-md-2" >Job Position :</label>
+        <div class="col-sm-8 col-md-8">
+          <input type="text" class="form-control" placeholder="Job Position" formControlName = "JobPosition">
+          <app-validation [control] = "employeeForm.controls.JobPosition"></app-validation>        
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2 col-md-2"  >Department :</label>
+        <div class="col-sm-8 col-md-8">
+          <input type="text" class="form-control" placeholder="Department" formControlName = "Department" > 
+          <app-validation [control] = "employeeForm.controls.Department"></app-validation>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+
+      <div class="form-group">
+        <label class="control-label col-sm-2 col-md-2"  >Salary :</label>
+        <div class="col-sm-8 col-md-8">
+          <input type="text" class="form-control" formControlName = "Salary" placeholder="Salary">
+          <app-validation [control] = "employeeForm.controls.Salary"></app-validation>
+        </div>
+        <div class="col-md-2"></div>    
+      </div>
+      </div>
+      <div class = "col-md-2">
+        <app-profilepic [profile]="ProfilePic" (notify) = "onNotifyEmit($event)"></app-profilepic>              
+      </div>
+    </div>
+
+    <div class="col-md-12" id = "sbmt" class="align">
+      <button type="submit"   [disabled]="!employeeForm.valid"  class="btn btn-info" >{{button}}</button>
+      <button type = "button" class="btn btn-info" (click) = "Cancel()">Cancel</button>
+      
+    </div> 
+      
+  </form> 
+
+  <div class="block-toaster" [hidden]="!toast">
+    <div id = "text">
+        Employee Added
+        <p>Employee_name has been Added</p>
+    </div>
+  </div>
+</div>
+<app-app-footer></app-app-footer>

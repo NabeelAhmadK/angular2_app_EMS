@@ -1,0 +1,45 @@
+<div id= "login-page">
+<div class="row">
+  
+  <div class="col-md-4 col-sm-3 col-xs-2"></div>
+  
+  <div class="col-md-4 col-sm-6 col-xs-8 bg-1">
+    <div class="row">
+        <div class = "col-md-12 col-sm-12" >
+            <h3 style="text-align : center; padding-bottom: 5%;">Sign In<img src = "./assets/images/primeng.png" width="50" height="50"/> </h3>
+            
+        </div>
+    </div>
+    
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+       
+      <h4 id = "error">{{errorMessage}}</h4>
+      <div class="form-group input-group">
+        <span class="input-group-addon"><i class="fa fa-user-o fa-fw"></i></span>
+        <input type="email" class="form-control" formControlName = "Email"  name = "email" placeholder="Enter Your Email Address" required>
+      </div>
+      
+      <div class="form-group input-group">
+        <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+        <input type="password" class="form-control" formControlName = "Password"  name = "Pwd" placeholder="*********" required>
+      </div>
+   
+      
+      <button type = "submit" id = "btn" name = "Submt_Login"  value = "Log In" class = "btn btn-primary">Log In</button>
+      
+      <div class="col-sm-12" id = "txt" >
+        <a href="#">Forgot User name or Password ?</a>
+      </div>
+      
+      <div class="col-sm-12" id = "txt" >
+         <p>Don't Have an Id <a [routerLink]="['./signup']">Create New</a></p>
+      </div>
+   
+    </form>
+  
+  </div>
+  <div class="col-md-4 col-sm-3 col-xs-2"></div>
+</div>
+
+
+</div>

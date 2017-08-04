@@ -1,0 +1,6 @@
+<img [src]="[profilepicture]" id = "img" alt="profile Picture" width="150" height="150" />
+<p>{{profile}}</p>
+
+<div style="text-align: center;">
+  <input type="file" value="Chose Image" (change)="onFileChange($event)" name = "profile" />
+</div>

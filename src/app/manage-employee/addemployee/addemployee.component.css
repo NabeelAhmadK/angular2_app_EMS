@@ -1,0 +1,41 @@
+#sbmt{
+
+    text-align: center;
+
+}
+
+input.ng-invalid{
+	border-left: 5px solid red;
+
+}
+
+input.ng-valid{
+	border-left: 5px solid green;
+}
+
+.block-toaster{
+    height: 87px;
+	background-color: rgba(36, 31, 86, 0.84);
+	width: 24%;
+	border-radius: 13px 136px 9px 136px;
+	/* position: relative; */
+	left: 84%;
+	margin-top: -11%;
+ 	position: relative;
+}
+
+#text{
+	
+	color: white;
+	left: 14%;
+	margin-top: -27%;
+	position: relative;
+	float: left;
+}
+
+.block-toaster:hover{
+    
+	background-color: rgba(13, 9, 52, 1);
+	cursor: pointer;
+	
+}

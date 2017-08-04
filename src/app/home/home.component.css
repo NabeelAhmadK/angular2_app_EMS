@@ -1,0 +1,26 @@
+h2 {
+
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    
+}
+
+ #btn1{
+     position: fixed;
+     top: 50%;
+     left: 45%;
+}
+#btn2{
+     position: fixed;
+     top: 50%;
+     right: 38%;
+}    
+
+.button{
+    text-align: center;
+}
+/* .inline {
+   display:inline-block;
+   margin-right:5px;
+} */

@@ -1,0 +1,44 @@
+<div class="row">  
+  <div class="col-md-4 col-sm-3 col-xs-2"></div>  
+  <div class="col-md-4 col-xs-12 col-sm-6 animated fadeInDown frm">
+    <div class="text">
+      <h2 style="text-align: center">Sign Up </h2>   
+    </div>
+    <hr>
+    <form action="signup.php" method="POST">
+      <div class="form-group">
+        <div class = " input-group" ng-app = "">
+           <span class="input-group-addon"><i class="fa fa-user fa-fw" aria-hidden="true"></i></span>
+           <input type="text" id = "name" name = "name" ng-model="name" placeholder="First Name Only" class = "form-control" onkeyup = "nameCheck(); return false;" required>
+        </div>
+        <span id="nameChec" style="color: #ff6666; font-weight: bolder;"></span>
+      </div>
+      <div class="form-group">
+        <div class = "input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></span>
+          <input type="email" id="email" name = "email" placeholder="Email Address" class = "form-control" onkeyup = "CheckEmail();  return false;" required>
+        </div>
+        <span id="emailCheck" style="color: #ff6666; font-weight: bolder;"></span> 
+      </div>
+      <div class="form-group">
+        <div class = "input-group">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+          <input type="password" id="pass1" name = "pwd" placeholder="Password" class = "form-control"    required>
+        </div>
+        <span id="passw" style="color: white; font-weight: bolder;"></span>
+      </div>
+      <div class="form-group">
+        <div class =  "input-group">
+          <span class="input-group-addon"><i class="fa fa-key fa-fw" aria-hidden="true"></i></span>
+          <input type="password"  id="pass2" name = "c_pwd" placeholder="Confirm Password" onkeyup="checkPass(); return false;" class = "form-control" onblur = "MatchPass()"  required>
+        </div>
+        <span id="confirmMessage" style="color: white; font-weight: bolder;"></span>
+      </div>
+      <button id = "btn" type = "submit" class="btnl btn btn-primary" name = "SubmitBtn"><i class="fa fa-sign-in fa-lg"></i> Sign Up </button>
+    </form>
+    <label style="text-align: center; color:white;">Already have an Account <a href="login.php"> Log In here !</a></label>
+  </div>
+ 
+  <div class="col-md-4 col-sm-3 col-xs-2"></div>
+
+</div>

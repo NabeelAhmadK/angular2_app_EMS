@@ -1,0 +1,18 @@
+<app-app-header></app-app-header>
+<div class="container" style="text-align: center;">
+	<div>
+
+	<div class="col-xs-4 col">
+		<button [routerLink]="['/manage/add']" class="btn btn-lg btn-success "><i class="fa fa-user-plus" aria-hidden="true"></i> Add Employee</button>
+	</div>
+
+	<div class="col-xs-4">
+		<button [routerLink]="['/manage/edit']" class="btn btn-lg btn-success"><i class="fa fa-pencil" aria-hidden="true"></i> Edit Employee</button>
+	</div>
+
+	<div class="col-xs-4">
+		<button [routerLink]="['/manage/delete']" class="btn btn-lg btn-success"><i class="fa fa-trash-o fa-lg"></i> Delete Employee</button>
+		
+	</div>
+</div>
+<app-app-footer></app-app-footer>
